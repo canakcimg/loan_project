@@ -46,3 +46,40 @@ The application will open in your default web browser.
 The application uses loan data files located in the `data/` directory:
 - `train.csv`: Training dataset
 - `test.csv`: Testing dataset
+
+## Docker Support
+
+### Running with Docker
+
+You can run the application using Docker:
+
+```bash
+docker pull gurkancnk/loanproject:latest
+docker run -p 8501:8501 gurkancnk/loanproject:latest
+```
+
+Then access the application at http://localhost:8501
+
+### Using Docker Compose
+
+Alternatively, you can use Docker Compose to run the application:
+
+```bash
+docker-compose up -d
+```
+
+### Building the Docker Image Locally
+
+If you want to build the Docker image locally:
+
+```bash
+docker build -t gurkancnk/loanproject:latest .
+```
+
+### GitHub Actions
+
+This project includes GitHub Actions workflows that automatically build and push the Docker image to Docker Hub when changes are pushed to the main branch.
+
+To use this feature, you need to set the following secrets in your GitHub repository:
+- `DOCKERHUB_USERNAME`: Your Docker Hub username
+- `DOCKERHUB_TOKEN`: Your Docker Hub access token
