@@ -28,4 +28,4 @@ RUN echo "Creating a placeholder model file for demonstration" && \
     joblib.dump(model, 'models/LightGBM_bestmodel.pkl')"
 
 # Set the command to run the app
-CMD ["streamlit", "run", "streamlit/Home.py", "--server.port=8501", "--server.address=0.0.0.0"] 
+CMD ["streamlit", "run", "src/main.py", "--server.port=8501", "--server.address=0.0.0.0"] 
